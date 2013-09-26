@@ -2,11 +2,12 @@ require 'spec_helper'
 
 module Codebreaker 
 	describe Marker do
-		describe "#exact_match_count" do 
-			context "with no matches" do
+		describe "#number_match_count" do 
+			context "with 1 exact match duplicated in guess" do
 				it "returns 0" do
+					# pending("refactor number_match_count")
 					marker = Marker.new('1234','5555') 
-					marker.exact_match_count.should == 0
+					marker.number_match_count.should == 0
 				end 
 			end
 
@@ -61,4 +62,4 @@ module Codebreaker
 			end 
 		end 
 	end
-end 
+# end 
